@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    background-color: whitesmoke;
+}
+
+nav{
+background-color: #ffffff;
+display: flex;
+justify-content: space-between;
+padding: 20px 30px;
+text-align: center;
+}
+nav > *{
+    background-color: #ffffff;
+    text-align: center;
+}
+nav h3{
+    color: #04daa8;
+    font-family: 'sofia', sans-serif;
+    font-weight: 500;
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 10px; */
+    text-align: center;
+    background-color: #ffffff;
+}
+.user i{
+    padding:0 5px;
+    text-align: center;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+.user p{
+    font-size: 14px;
+    text-align: center;
+}
+.user > *{
+    background-color: #ffffff;
+}
+.main-body{
+background-color: whitesmoke;
+}
+.title-button{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.title-button a{
+    background-color: #04daa8;
+    color: #ffffff;
+    padding: 8px;
+    text-decoration: none;
+    width: 120px;
+    border: 1px solid #04daa8;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.sp {
+    font-size: 20px;
+    color: rgb(97, 95, 95);
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.box-1{
+    background-color: #ffffff;
+    padding: 10px;
+    width: 360px;
+    line-height: 30px;
+    text-align: center;
+}
+.box-1 > *{
+    background-color: #ffffff;
+}
+
+.box-1 .wrapper{
+    margin-top: 9px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.box-1 .date{
+    margin-top: 20px;
+}
+.box-1 .wrapper >*{
+    background-color: #ffffff;
+}
+.box-1 .date >*{
+    background-color: #ffffff;
+}
+.box-1 .wrapper h3{
+    margin-left: 65px;
+    width: 250px;
+    white-space: nowrap; 
+    overflow: hidden;
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+.box-1 .wrapper p{
+    margin-left: 80px;
+    width: 150px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+span i{
+    color: #04daa8;
+}
+
+.input-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.input-title p{
+    color: #3a3838;
+    font-size: 20px;
+}
+
+.input-forms{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.input-forms .a form{
+    display: flex;
+    width: fit-content;
+    padding: 15px;
+    background-color: #ffffff;
+    flex-direction: column;
+}
+.input-forms .a form input[type="text"], 
+input[type="file"], input[type="date"] {
+    width: 400px;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #bbb;
+}
+
+.input-forms .a form textarea{
+    resize: none;
+    margin-top: 10px;
+    width: 400px;
+    height: fit-content;
+    outline: none;
+    border: 1px solid #bbb;
+}
+.input-forms .a form button{
+    width: 400px;
+    background-color: #04daa8;
+    color: #ffffff;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #04daa8;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.input-forms .a .tita p{
+    color: #3a3838;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.input-forms .b .tital p{
+    color: #3a3838;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.input-forms .b form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+}
+.input-forms .b form input[type="text"], input[type="password"]
+{
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+}
+.input-forms .b form button{
+    padding: 10px;
+    color: white;
+    background-color: #04daa8;
+    border: 1px solid #04daa8;
+    outline: none;
+}
+.input-forms .b .b-all-admins{
+    padding: 2em 0;
+    width: fit-content;
+}
+.input-forms .b .b-all-admins .names{
+    width: 400px;
+background-color: #ffffff;
+}
+.input-forms .b .b-all-admins p{
+    /* text-align: center; */
+    font-size: 16px;
+    background-color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+}
+.input-forms .b .b-all-admins .names a{
+float: right;
+text-decoration: none;
+color: #04daa8;
+background-color: #ffffff;
+}
+.input-forms .b .b-all-admins h3{
+    font-family: 'poppins', sans-serif;
+    padding-bottom: 10px;
+    color: #3a3838;
+    font-weight: 300;
+}
+ul li{
+    width: fit-content;
+    display: block;
+    height: fit-content;
+    padding: 10px;
+    background-color: #ffffff;
+    /* position: absolute; */
+    /* visibility: hidden; */
+    display: none;
+    margin-top: 6px;
+}
+ul li a{
+    text-decoration: none;
+    color:#3a3838;
+}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    background-color: whitesmoke;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    background-color: #ffffff;
+}
+nav h3{
+    font-family: 'sofia', cursive;
+    color: #04daa8;
+    /* font-weight: 500; */
+    /* font-size: 20px; */
+}
+nav > *{
+    background-color: #ffffff;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 25px;
+    background-color: #ffffff;
+  
+}
+nav ul li a{
+    color: #383737;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.wrapper{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    margin-top: 8em;
+}
+.wrapper .login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .login form{
+    padding: 30px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+
+}
+.wrapper .login form h3{
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+}
+
+.wrapper .login form >*{
+    display: block;
+}
+.wrapper .login form i{
+    background-color: #ffffff;
+    padding: 4px;
+}
+.wrapper .login form input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #bbb;
+    width: 370px;
+}
+.wrapper .login form input::placeholder{
+    background-color: #ffffff;
+    font-weight: 500;
+}
+.wrapper .login form button{
+    cursor: pointer;
+    width: 370px;
+    padding: 14px;
+    border: 1px solid #04daa8;
+    background-color: #04daa8;
+    color: #ffffff;
+}
+ p .error{
+    color: red;
+    text-align: center;
+}
