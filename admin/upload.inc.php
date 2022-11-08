@@ -30,7 +30,37 @@ $res_u = mysqli_query($conn, $sql_u);
         }
         else {
            
-        
+            $file = $_FILES['file'];
+            $filename = $_FILES['file']['name'];
+            $filetmpName = $_FILES['file']['tmp_name'];
+            $fileerr = $_FILES['file']['error'];
+            $fileSize = $_FILES['file']['size'];
+            $fileType = $_FILES['file']['type'];
+
+            $fileExt = explode('.', $filename);
+            $fileActExt = strtolower(end($fileExt));
+
+            $allowedType = ['jpeg','jpg','pdf'];
+
+            if(in_array($fileActExt, $allowedType)){
+              if($fileError===0){
+                 if($fileSize > 100000){
+                     $fileNameNew = uniqid('', true).".".$fileActExt;
+                     $fileDestination = 'uploads/'.$fileNameNew;
+                     move_uploaded_file($filetmpName, $fileDestination);
+                 }
+                 else{
+                    header("Location: onboarding.php?error=filesize");
+                 }
+              }
+              else{
+                header("Location: onboarding.php?error=erroruploading");
+              }
+            }
+            else{
+                header("Location: onboarding.php?error=filetype");
+            }
+
             mysqli_stmt_bind_param($stmt, 'sssss', $title, $ref, $date, $author, $preface,);
             mysqli_stmt_execute($stmt);
             header("Location: onboarding.php?error=sucess");
@@ -43,4 +73,3 @@ $res_u = mysqli_query($conn, $sql_u);
         else {
             header("Location: onboarding.php");
         }
-

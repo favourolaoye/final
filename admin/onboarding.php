@@ -118,6 +118,7 @@ else if(!isset($_SESSION[''])){
                         exit();
                      }
                      else{
+                        
                         $signupCheck = $_GET['error'];
 
                         if($signupCheck == "exists"){
