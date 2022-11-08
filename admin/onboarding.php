@@ -5,9 +5,8 @@ session_start();
 if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit();
-}
-else if(!isset($_SESSION[''])){
-//check if root admin;
+} else if (!isset($_SESSION[''])) {
+    //check if root admin;
 }
 ?>
 
@@ -32,6 +31,29 @@ else if(!isset($_SESSION[''])){
 </head>
 
 <body>
+    <div class="overlay">
+        <form method="get">
+        <?php
+            if (!isset($_GET['error'])) {
+                exit();
+            } else {
+                $signupCheck = $_GET['error'];
+
+                if ($signupCheck == "empty") {
+                    echo "<p style='text-align:center;color:red;' class='error'>Fill in all fields</p>";
+                    exit();
+                } elseif ($signupCheck == "invalid") {
+                    echo "<p style='text-align:center;color:red;' class='error'>invalid credentials</p>";
+                    exit();
+                } elseif ($signupCheck == "sqlerror") {
+                    echo "<p style='text-align:center;color:red;padding-top:10px;' class='error'>error validating data db</p>";
+                    exit();
+                }
+            }
+
+        ?>
+        </form>
+    </div>
     <nav>
         <h3>Annals of Research Journals</h3>
         <div class="user">
@@ -44,7 +66,6 @@ else if(!isset($_SESSION[''])){
         <!-- bars====================================================================== -->
         <div class="title-button">
             <p class="sp">Journals</p>
-
             <a href="Logout.php">Logout</a>
         </div>
 
@@ -112,35 +133,7 @@ else if(!isset($_SESSION[''])){
                     <input type="date" name="datein" required>
                     <textarea name="preface" cols="30" rows="10" placeholder="Journals abstract"></textarea>
                     <button name="article" type="submit">Post journal</button>
-                    <div class="spaces">
-                         <?php
-                     if(!isset($_GET['error'])){
-                        exit();
-                     }
-                     else{
-                        
-                        $signupCheck = $_GET['error'];
 
-                        if($signupCheck == "exists"){
-                            echo "<p style='text-align:center;color:red;' class='error'>This article exists in the database</p>";
-                            exit();
-                        }
-                    
-                        elseif($signupCheck == "sqlerror"){
-                            echo "<p style='text-align:center;color:red;' class='error'>Error inserting data</p>";
-                            exit();                        
-                        }
-                        
-                        elseif($signupCheck == "sucess"){
-                            echo "<p style='text-align:center;color:green;padding-top:10px;' class='error'>upload sucessful</p>";
-                            exit();
-                        }
-                       
-                     }
-
-                    ?>
-                    </div>
-                   
                 </form>
             </div>
 
